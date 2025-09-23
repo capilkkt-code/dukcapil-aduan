@@ -22,18 +22,10 @@
         
         body {
             font-family: 'Poppins', 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f0c29 0%, #24243e 25%, #302b63 50%, #0f3460 75%, #0a2472 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #3b82f6 50%, #60a5fa 75%, #93c5fd 100%);
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
-            animation: backgroundShift 20s ease-in-out infinite;
-        }
-        
-        @keyframes backgroundShift {
-            0%, 100% { background: linear-gradient(135deg, #0f0c29 0%, #24243e 25%, #302b63 50%, #0f3460 75%, #0a2472 100%); }
-            25% { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #3b82f6 50%, #60a5fa 75%, #93c5fd 100%); }
-            50% { background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%); }
-            75% { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 25%, #43e97b 50%, #38f9d7 75%, #667eea 100%); }
         }
         
         body::before {
@@ -44,20 +36,11 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.6) 0%, transparent 60%),
-                radial-gradient(circle at 80% 20%, rgba(147, 197, 253, 0.5) 0%, transparent 60%),
-                radial-gradient(circle at 40% 40%, rgba(96, 165, 250, 0.4) 0%, transparent 50%),
-                radial-gradient(circle at 60% 70%, rgba(30, 58, 138, 0.5) 0%, transparent 40%),
-                radial-gradient(circle at 10% 10%, rgba(168, 85, 247, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 90% 90%, rgba(236, 72, 153, 0.3) 0%, transparent 50%);
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.4) 0%, transparent 60%),
+                radial-gradient(circle at 80% 20%, rgba(147, 197, 253, 0.3) 0%, transparent 60%),
+                radial-gradient(circle at 40% 40%, rgba(96, 165, 250, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 60% 70%, rgba(30, 58, 138, 0.3) 0%, transparent 40%);
             z-index: -1;
-            animation: floatingOrbs 15s ease-in-out infinite;
-        }
-        
-        @keyframes floatingOrbs {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-20px) rotate(120deg); }
-            66% { transform: translateY(10px) rotate(240deg); }
         }
         
         body::after {
@@ -67,56 +50,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.15)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.12)"/><circle cx="10" cy="60" r="0.8" fill="rgba(255,255,255,0.08)"/><circle cx="90" cy="30" r="0.6" fill="rgba(255,255,255,0.06)"/><circle cx="35" cy="85" r="1.2" fill="rgba(168,85,247,0.1)"/><circle cx="65" cy="45" r="0.7" fill="rgba(236,72,153,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/><circle cx="10" cy="60" r="0.8" fill="rgba(255,255,255,0.06)"/><circle cx="90" cy="30" r="0.6" fill="rgba(255,255,255,0.04)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
             z-index: -1;
-            opacity: 0.4;
-            animation: sparkle 8s linear infinite;
-        }
-        
-        @keyframes sparkle {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 0.6; }
-        }
-        
-        /* Header Animation Keyframes */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-        
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        @keyframes sparkle {
-            0%, 100% { 
-                opacity: 0;
-                transform: scale(0.5);
-            }
-            50% { 
-                opacity: 1;
-                transform: scale(1.2);
-            }
-        }
-        
-        @keyframes bounce {
-            0%, 100% { 
-                transform: translateY(0px);
-                opacity: 0.3;
-            }
-            50% { 
-                transform: translateY(-10px);
-                opacity: 0.8;
-            }
-        }
-        
-        /* Professional Header Styles */
-        .professional-header {
-            position: relative;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
+            opacity: 0.3;
         }
         
 
@@ -169,145 +105,51 @@
             background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
         }
         
-        /* Floating Particles */
-        .floating-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        .particle {
-            position: absolute;
-            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(147,197,253,0.4) 50%, transparent 100%);
-            border-radius: 50%;
-            animation: float 20s infinite linear;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-        
         /* Service Card Styles */
         .service-card {
-            border: 3px solid rgba(255, 255, 255, 0.5);
+            border: 3px solid rgba(255, 255, 255, 0.4);
             position: relative;
             overflow: hidden;
-            background: rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(40px) saturate(180%);
             box-shadow: 
-                0 35px 70px -12px rgba(30, 58, 138, 0.4),
-                0 20px 40px -5px rgba(59, 130, 246, 0.3),
-                0 0 0 1px rgba(255, 255, 255, 0.3),
-                inset 0 2px 4px rgba(255, 255, 255, 0.4),
-                inset 0 -2px 4px rgba(59, 130, 246, 0.15);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            transform: translateY(0px);
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .service-card:hover::before {
-            left: 100%;
+                0 30px 60px -12px rgba(30, 58, 138, 0.3),
+                0 15px 30px -5px rgba(59, 130, 246, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.2),
+                inset 0 2px 4px rgba(255, 255, 255, 0.3),
+                inset 0 -2px 4px rgba(59, 130, 246, 0.1);
         }
         
         .service-card:hover {
-            border-color: rgba(147, 197, 253, 0.9);
+            border-color: rgba(59, 130, 246, 0.8);
             box-shadow: 
-                0 60px 120px -12px rgba(30, 58, 138, 0.6),
-                0 30px 60px -5px rgba(59, 130, 246, 0.5),
-                0 0 0 1px rgba(147, 197, 253, 0.6),
-                inset 0 4px 8px rgba(255, 255, 255, 0.6),
-                inset 0 -4px 8px rgba(59, 130, 246, 0.25);
-            background: rgba(255, 255, 255, 0.28);
-            backdrop-filter: blur(60px) saturate(200%);
-            transform: translateY(-8px) scale(1.02);
+                0 50px 100px -12px rgba(30, 58, 138, 0.5),
+                0 25px 50px -5px rgba(59, 130, 246, 0.4),
+                0 0 0 1px rgba(59, 130, 246, 0.4),
+                inset 0 3px 6px rgba(255, 255, 255, 0.5),
+                inset 0 -3px 6px rgba(59, 130, 246, 0.2);
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(50px) saturate(200%);
         }
         
         /* Button Styles */
         .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 25%, #60a5fa 50%, #93c5fd 75%, #dbeafe 100%);
             position: relative;
             overflow: hidden;
-            border: 2px solid rgba(255, 255, 255, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             box-shadow: 
-                0 20px 40px rgba(102, 126, 234, 0.4),
-                0 8px 20px rgba(118, 75, 162, 0.3),
-                inset 0 2px 0 rgba(255, 255, 255, 0.3);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            transform: translateY(0px);
-        }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.6s;
-        }
-        
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-        
-        .btn-primary::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover::after {
-            width: 300px;
-            height: 300px;
+                0 15px 35px rgba(30, 64, 175, 0.4),
+                0 5px 15px rgba(59, 130, 246, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
         
         .btn-primary:hover {
             box-shadow: 
-                0 35px 70px rgba(102, 126, 234, 0.6),
-                0 15px 35px rgba(118, 75, 162, 0.5),
-                inset 0 3px 0 rgba(255, 255, 255, 0.5);
-            border-color: rgba(255, 255, 255, 0.7);
-            transform: translateY(-4px) scale(1.05);
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 25%, #43e97b 50%, #38f9d7 75%, #667eea 100%);
-        }
-        
-        .btn-primary:active {
-            transform: translateY(-2px) scale(1.02);
+                0 25px 50px rgba(30, 64, 175, 0.5),
+                0 10px 25px rgba(59, 130, 246, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            border-color: rgba(255, 255, 255, 0.5);
         }
         
         /* File Upload Styles */
@@ -362,58 +204,6 @@
             opacity: 1;
         }
         
-        /* Scroll Animations */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .fade-in-up.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .fade-in-left {
-            opacity: 0;
-            transform: translateX(-30px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .fade-in-left.animate {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .fade-in-right {
-            opacity: 0;
-            transform: translateX(30px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .fade-in-right.animate {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .scale-in {
-            opacity: 0;
-            transform: scale(0.8);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .scale-in.animate {
-            opacity: 1;
-            transform: scale(1);
-        }
-        
-        /* Staggered Animation Delays */
-        .delay-100 { transition-delay: 0.1s; }
-        .delay-200 { transition-delay: 0.2s; }
-        .delay-300 { transition-delay: 0.3s; }
-        .delay-400 { transition-delay: 0.4s; }
-        .delay-500 { transition-delay: 0.5s; }
-        
         /* Responsive Styles */
         @media (max-width: 768px) {
             .modal-content {
@@ -428,140 +218,57 @@
 
 
     <!-- Header -->
-    <header class="shadow-2xl backdrop-blur-lg border-b border-white/20 relative overflow-hidden" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 25%, rgba(51, 65, 85, 0.85) 50%, rgba(71, 85, 105, 0.8) 75%, rgba(100, 116, 139, 0.75) 100%); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 15px 30px -5px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);">
-        <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://iili.io/KaL2iSs.jpg'); opacity: 0.5;"></div>
-        
-        <!-- Professional Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/50 to-slate-700/40"></div>
-        
-        <!-- Subtle Professional Pattern -->
+    <header class="shadow-2xl backdrop-blur-lg border-b border-white/20 relative overflow-hidden" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 25%, #60a5fa 50%, #93c5fd 75%); box-shadow: 0 25px 45px -12px rgba(30, 64, 175, 0.4);">
+        <!-- Background Elements -->
         <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08) 0%, transparent 50%);"></div>
+            <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-3xl"></div>
+            <div class="absolute top-20 right-0 w-80 h-80 bg-gradient-to-bl from-blue-200/30 to-transparent rounded-full blur-2xl"></div>
+            <div class="absolute bottom-0 left-1/3 w-64 h-64 bg-gradient-to-tr from-indigo-200/25 to-transparent rounded-full blur-xl"></div>
         </div>
-        
-        <!-- Elegant Border Accent -->
-        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-        
-        <!-- Floating Decorative Elements -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-10 left-10 w-20 h-20 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-full blur-xl animate-pulse"></div>
-            <div class="absolute top-20 right-20 w-16 h-16 bg-gradient-to-br from-emerald-400/20 to-cyan-500/20 rounded-full blur-lg animate-bounce" style="animation-delay: 1s;"></div>
-            <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-gradient-to-br from-pink-400/20 to-rose-500/20 rounded-full blur-md animate-pulse" style="animation-delay: 2s;"></div>
-            <div class="absolute bottom-10 right-1/3 w-14 h-14 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-full blur-lg animate-bounce" style="animation-delay: 0.5s;"></div>
-        </div>
-        
-        <div class="container mx-auto px-4 py-12 lg:py-16 relative z-10">
+        <div class="container mx-auto px-4 py-8 lg:py-12">
             <!-- Mobile Layout -->
             <div class="block md:hidden text-center">
-                <div class="mb-8 relative">
-                    <!-- Logo Container with Enhanced Styling -->
-                    <div class="relative inline-block">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-pink-500/30 rounded-full blur-2xl animate-pulse"></div>
-                        <div class="relative bg-white/15 backdrop-blur-xl rounded-full p-6 border-2 border-white/30 shadow-2xl transition-all duration-700 hover:scale-105 hover:rotate-3" style="box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 15px 30px rgba(59, 130, 246, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.3);">
-                            <img src="https://iili.io/K9rv7pt.png" alt="Logo Disdukcapil" class="w-40 h-40 sm:w-48 sm:h-48 object-contain mx-auto transition-transform duration-700 hover:scale-110" style="filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 25px rgba(255, 255, 255, 0.3)) contrast(1.1) brightness(1.05);">
-                        </div>
-                    </div>
+                <div class="mb-4">
+                    <img src="https://iili.io/K9rv7pt.png" alt="Logo Disdukcapil" class="w-32 h-32 sm:w-36 sm:h-36 object-contain mx-auto">
                 </div>
-                
-                <!-- Enhanced Text Styling -->
-                <div class="mb-8 space-y-4">
-                    <div class="relative">
-                        <h1 class="text-3xl sm:text-4xl font-black text-white relative z-10" style="text-shadow: 4px 4px 0px rgba(0,0,0,1), 6px 6px 0px rgba(30,58,138,0.8), 8px 8px 0px rgba(59,130,246,0.6), 0 0 40px rgba(255,255,255,0.8), 0 0 80px rgba(147,197,253,0.6);">
-                            ✨ LAYANAN PENGADUAN ✨
-                        </h1>
-                        <div class="absolute inset-0 text-3xl sm:text-4xl font-black text-blue-300/30 blur-sm">
-                            ✨ LAYANAN PENGADUAN ✨
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white/20 backdrop-blur-xl rounded-2xl p-6 border-2 border-white/40 shadow-2xl mx-4" style="box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 15px 30px rgba(255,255,255,0.2), inset 0 2px 4px rgba(255,255,255,0.3);">
-                        <p class="text-white text-lg sm:text-xl font-black drop-shadow-lg" style="text-shadow: 3px 3px 0px rgba(0,0,0,1), 5px 5px 0px rgba(30,58,138,0.8), 0 0 30px rgba(255,255,255,0.6);">
-                            🏛️ DINAS KEPENDUDUKAN DAN PENCATATAN SIPIL
-                        </p>
-                        <div class="w-24 h-1.5 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full mx-auto my-4 shadow-lg"></div>
-                        <p class="text-white text-base sm:text-lg font-bold drop-shadow-md" style="text-shadow: 2px 2px 0px rgba(0,0,0,1), 4px 4px 0px rgba(30,58,138,0.6), 0 0 20px rgba(255,255,255,0.4);">
-                            📍 Kabupaten Kepulauan Tanimbar
-                        </p>
-                        <p class="text-white/95 text-sm sm:text-base font-semibold mt-3 italic" style="text-shadow: 2px 2px 0px rgba(0,0,0,0.8), 0 0 15px rgba(255,255,255,0.3);">
-                            "Melayani dengan Hati, Profesional dan Berintegritas"
-                        </p>
-                    </div>
+                <div class="mb-4">
+                    <h1 class="text-2xl sm:text-3xl font-black text-white drop-shadow-2xl" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.3);">Layanan Pengaduan</h1>
+                    <p class="text-white text-base sm:text-lg font-bold drop-shadow-xl" style="text-shadow: 1px 1px 6px rgba(0,0,0,0.7), 0 0 15px rgba(255,255,255,0.2);">Dinas Kependudukan dan Pencatatan Sipil</p>
+                    <p class="text-white/95 text-sm sm:text-base font-semibold drop-shadow-lg" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">Kabupaten Kepulauan Tanimbar</p>
                 </div>
-                
-                <!-- Enhanced Clock Container -->
-                <div class="date-container bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-6 border-2 border-white/25 shadow-2xl relative overflow-hidden mx-4" style="box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 15px 30px rgba(59, 130, 246, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.3);">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-pink-500/10 rounded-3xl"></div>
-                    <div class="flex items-center justify-center mb-4 relative z-10">
-                        <div class="relative">
-                            <div class="w-4 h-4 bg-green-400 rounded-full mr-4 shadow-lg animate-pulse" style="box-shadow: 0 0 15px rgba(34, 197, 94, 0.8), 0 0 30px rgba(34, 197, 94, 0.4);"></div>
-                            <div class="absolute inset-0 w-4 h-4 bg-green-300 rounded-full mr-4 animate-ping"></div>
-                        </div>
-                        <div class="clock text-green-300 text-lg sm:text-xl font-bold drop-shadow-lg" id="clock-mobile" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.6), 0 0 15px rgba(255,255,255,0.3);"></div>
+                <div class="date-container bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-xl">
+                    <div class="flex items-center justify-center mb-2">
+                        <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                        <div class="clock text-white text-base sm:text-lg font-bold drop-shadow-lg" id="clock-mobile" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.5);"></div>
                     </div>
-                    <div class="text-center relative z-10">
-                        <div class="inline-flex items-center px-4 py-2 bg-white/10 rounded-full border border-white/20 backdrop-blur-sm">
-                            <svg class="w-5 h-5 text-white/80 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                            </svg>
-                            <div class="text-blue-200 text-sm sm:text-base font-semibold drop-shadow-sm" id="date-mobile" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.5);"></div>
-                        </div>
+                    <div class="text-center">
+                        <div class="text-white/95 text-xs sm:text-sm font-semibold bg-gradient-to-r from-blue-100 via-white to-cyan-100 bg-clip-text text-transparent drop-shadow-md" id="date-mobile" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.3);"></div>
                     </div>
                 </div>
             </div>
 
             <!-- Tablet & Desktop Layout -->
             <div class="hidden md:flex items-center justify-center">
-                <div class="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-16 text-center">
-                    <!-- Enhanced Logo Section -->
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-pink-500/30 rounded-full blur-3xl animate-pulse"></div>
-                        <div class="relative bg-white/15 backdrop-blur-xl rounded-full p-8 border-2 border-white/30 shadow-2xl transition-all duration-700 hover:scale-105 hover:rotate-3" style="box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(59, 130, 246, 0.4), inset 0 3px 6px rgba(255, 255, 255, 0.3);">
-                            <img src="https://iili.io/K9rv7pt.png" alt="Logo Disdukcapil" class="w-48 h-48 lg:w-56 lg:h-56 object-contain transition-transform duration-700 hover:scale-110" style="filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)) contrast(1.1) brightness(1.05);">
-                        </div>
+                <div class="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 text-center">
+                    <div>
+                        <img src="https://iili.io/K9rv7pt.png" alt="Logo Disdukcapil" class="w-36 h-36 lg:w-40 lg:h-40 object-contain">
                     </div>
-                    
-                    <!-- Enhanced Text Section -->
-                    <div class="space-y-6 max-w-2xl">
-                        <div class="relative">
-                            <h1 class="text-4xl lg:text-6xl xl:text-7xl font-black text-white relative z-10" style="text-shadow: 5px 5px 0px rgba(0,0,0,1), 8px 8px 0px rgba(30,58,138,0.9), 12px 12px 0px rgba(59,130,246,0.7), 0 0 50px rgba(255,255,255,0.9), 0 0 100px rgba(147,197,253,0.7);">
-                                ✨ LAYANAN PENGADUAN ✨
-                            </h1>
-                            <div class="absolute inset-0 text-4xl lg:text-6xl xl:text-7xl font-black text-blue-300/30 blur-sm">
-                                ✨ LAYANAN PENGADUAN ✨
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white/25 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border-2 border-white/50 shadow-2xl" style="box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 20px 40px rgba(255,255,255,0.3), inset 0 3px 6px rgba(255,255,255,0.4);">
-                            <p class="text-white text-xl lg:text-3xl xl:text-4xl font-black drop-shadow-lg mb-6" style="text-shadow: 4px 4px 0px rgba(0,0,0,1), 6px 6px 0px rgba(30,58,138,0.9), 0 0 35px rgba(255,255,255,0.7);">
-                                🏛️ DINAS KEPENDUDUKAN DAN PENCATATAN SIPIL
-                            </p>
-                            <div class="w-40 h-2 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full mx-auto my-6 shadow-xl"></div>
-                            <p class="text-white text-lg lg:text-2xl xl:text-3xl font-bold drop-shadow-md mb-4" style="text-shadow: 3px 3px 0px rgba(0,0,0,1), 5px 5px 0px rgba(30,58,138,0.7), 0 0 25px rgba(255,255,255,0.5);">
-                                📍 Kabupaten Kepulauan Tanimbar
-                            </p>
-                            <p class="text-white text-base lg:text-xl font-semibold italic" style="text-shadow: 2px 2px 0px rgba(0,0,0,0.9), 0 0 20px rgba(255,255,255,0.4);">
-                                "Melayani dengan Hati, Profesional dan Berintegritas"
-                            </p>
-                        </div>
+                    <div>
+                        <h1 class="text-3xl lg:text-5xl font-black text-white drop-shadow-2xl" style="text-shadow: 3px 3px 12px rgba(0,0,0,0.8), 0 0 25px rgba(255,255,255,0.3);">Layanan Pengaduan</h1>
+                        <p class="text-white text-lg lg:text-xl font-bold drop-shadow-xl" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7), 0 0 18px rgba(255,255,255,0.2);">Dinas Kependudukan dan Pencatatan Sipil</p>
+                        <p class="text-white/95 text-base lg:text-lg font-semibold drop-shadow-lg" style="text-shadow: 1px 1px 6px rgba(0,0,0,0.6);">Kabupaten Kepulauan Tanimbar</p>
                     </div>
-                    
-                    <!-- Enhanced Clock Section -->
-                    <div class="date-container bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border-2 border-white/25 shadow-2xl relative overflow-hidden transition-all duration-500 hover:bg-white/20 hover:border-white/35" style="box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(59, 130, 246, 0.4), inset 0 3px 6px rgba(255, 255, 255, 0.3);">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-pink-500/10 rounded-3xl"></div>
-                        <div class="flex items-center justify-center mb-6 relative z-10">
-                            <div class="relative">
-                                <div class="w-5 h-5 bg-green-400 rounded-full mr-5 shadow-lg animate-pulse" style="box-shadow: 0 0 20px rgba(34, 197, 94, 0.8), 0 0 40px rgba(34, 197, 94, 0.4);"></div>
-                                <div class="absolute inset-0 w-5 h-5 bg-green-300 rounded-full mr-5 animate-ping"></div>
-                            </div>
-                            <div class="clock text-green-300 text-2xl lg:text-3xl font-bold drop-shadow-lg" id="clock-desktop" style="text-shadow: 3px 3px 12px rgba(0,0,0,0.7), 0 0 20px rgba(255,255,255,0.4);"></div>
+                    <div class="date-container bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
+                        <div class="flex items-center justify-center mb-3">
+                            <div class="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
+                            <div class="clock text-white text-lg lg:text-xl font-bold drop-shadow-lg" id="clock-desktop" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.5);"></div>
                         </div>
-                        <div class="text-center relative z-10">
-                            <div class="inline-flex items-center px-6 py-3 bg-white/10 rounded-full border border-white/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/15">
-                                <svg class="w-6 h-6 text-white/80 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="text-center">
+                            <div class="inline-flex items-center px-3 py-1 bg-white/5 rounded-full border border-white/10">
+                                <svg class="w-4 h-4 text-white/70 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                 </svg>
-                                <div class="text-blue-200 text-lg lg:text-xl font-semibold drop-shadow-sm" id="date-desktop" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.5);"></div>
+                                <div class="text-white/95 text-sm lg:text-base font-semibold bg-gradient-to-r from-blue-100 via-white to-cyan-100 bg-clip-text text-transparent drop-shadow-md" id="date-desktop" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.3);"></div>
                             </div>
                         </div>
                     </div>
@@ -571,9 +278,6 @@
     </header>
 
 
-
-    <!-- Floating Particles -->
-    <div class="floating-particles" id="particles"></div>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-12 relative z-10">
@@ -588,13 +292,12 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
             <!-- Card 1: Pendaftaran Penduduk -->
-            <div class="service-card bg-white rounded-2xl p-6 lg:p-8 shadow-lg fade-in-up delay-100">
+            <div class="service-card bg-white rounded-2xl p-6 lg:p-8 shadow-lg">
                 <div class="text-center mb-6">
-                    <div class="service-icon w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative overflow-hidden transition-all duration-500 hover:scale-110 hover:rotate-12" style="box-shadow: 0 25px 50px rgba(168, 85, 247, 0.6), 0 15px 30px rgba(236, 72, 153, 0.4), 0 0 40px rgba(239, 68, 68, 0.3);">
-                        <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent rounded-full animate-pulse"></div>
-                        <div class="absolute inset-0 bg-gradient-to-tl from-cyan-200/30 to-transparent rounded-full"></div>
-                        <div class="absolute inset-0 rounded-full animate-spin" style="background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.2), transparent); animation-duration: 3s;"></div>
-                        <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white relative z-10 drop-shadow-lg transition-transform duration-300 hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="service-icon w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-blue-400 via-blue-600 to-indigo-800 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative overflow-hidden" style="box-shadow: 0 20px 40px rgba(30, 64, 175, 0.6), 0 10px 20px rgba(59, 130, 246, 0.4), 0 0 30px rgba(147, 197, 253, 0.3);">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent rounded-full"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tl from-cyan-200/20 to-transparent rounded-full"></div>
+                        <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white relative z-10 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </div>
@@ -612,13 +315,12 @@
             </div>
 
             <!-- Card 2: Pencatatan Sipil -->
-            <div class="service-card bg-white rounded-2xl p-6 lg:p-8 shadow-lg fade-in-up delay-200">
+            <div class="service-card bg-white rounded-2xl p-6 lg:p-8 shadow-lg">
                 <div class="text-center mb-6">
-                    <div class="service-icon w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative overflow-hidden transition-all duration-500 hover:scale-110 hover:rotate-12" style="box-shadow: 0 25px 50px rgba(16, 185, 129, 0.6), 0 15px 30px rgba(20, 184, 166, 0.4), 0 0 40px rgba(6, 182, 212, 0.3);">
-                        <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent rounded-full animate-pulse"></div>
-                        <div class="absolute inset-0 bg-gradient-to-tl from-cyan-200/30 to-transparent rounded-full"></div>
-                        <div class="absolute inset-0 rounded-full animate-spin" style="background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.2), transparent); animation-duration: 4s;"></div>
-                        <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white relative z-10 drop-shadow-lg transition-transform duration-300 hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="service-icon w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-indigo-500 via-blue-700 to-cyan-800 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative overflow-hidden" style="box-shadow: 0 20px 40px rgba(30, 64, 175, 0.6), 0 10px 20px rgba(59, 130, 246, 0.4), 0 0 30px rgba(147, 197, 253, 0.3);">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent rounded-full"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tl from-cyan-200/20 to-transparent rounded-full"></div>
+                        <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white relative z-10 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
                     </div>
@@ -636,13 +338,12 @@
             </div>
 
             <!-- Card 3: PIAK dan Pemanfaatan Data -->
-            <div class="service-card bg-white rounded-2xl p-6 lg:p-8 shadow-lg md:col-span-2 lg:col-span-1 fade-in-up delay-300">
+            <div class="service-card bg-white rounded-2xl p-6 lg:p-8 shadow-lg md:col-span-2 lg:col-span-1">
                 <div class="text-center mb-6">
-                    <div class="service-icon w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative overflow-hidden transition-all duration-500 hover:scale-110 hover:rotate-12" style="box-shadow: 0 25px 50px rgba(249, 115, 22, 0.6), 0 15px 30px rgba(239, 68, 68, 0.4), 0 0 40px rgba(236, 72, 153, 0.3);">
-                        <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent rounded-full animate-pulse"></div>
-                        <div class="absolute inset-0 bg-gradient-to-tl from-cyan-200/30 to-transparent rounded-full"></div>
-                        <div class="absolute inset-0 rounded-full animate-spin" style="background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.2), transparent); animation-duration: 5s;"></div>
-                        <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white relative z-10 drop-shadow-lg transition-transform duration-300 hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="service-icon w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-cyan-600 via-blue-700 to-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg relative overflow-hidden" style="box-shadow: 0 20px 40px rgba(30, 64, 175, 0.6), 0 10px 20px rgba(59, 130, 246, 0.4), 0 0 30px rgba(147, 197, 253, 0.3);">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent rounded-full"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tl from-cyan-200/20 to-transparent rounded-full"></div>
+                        <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white relative z-10 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
                         </svg>
                     </div>
@@ -1026,73 +727,6 @@
         setInterval(updateTime, 1000);
         updateTime(); // Initial call
 
-        // Create floating particles
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            
-            // Random size between 2px and 8px
-            const size = Math.random() * 6 + 2;
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            
-            // Random horizontal position
-            particle.style.left = Math.random() * 100 + '%';
-            
-            // Random animation duration between 15-25 seconds
-            const duration = Math.random() * 10 + 15;
-            particle.style.animationDuration = duration + 's';
-            
-            // Random delay
-            particle.style.animationDelay = Math.random() * 5 + 's';
-            
-            // Random colors
-            const colors = [
-                'radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(147,197,253,0.4) 50%, transparent 100%)',
-                'radial-gradient(circle, rgba(168,85,247,0.6) 0%, rgba(236,72,153,0.3) 50%, transparent 100%)',
-                'radial-gradient(circle, rgba(59,130,246,0.6) 0%, rgba(147,197,253,0.3) 50%, transparent 100%)',
-                'radial-gradient(circle, rgba(16,185,129,0.6) 0%, rgba(6,182,212,0.3) 50%, transparent 100%)'
-            ];
-            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-            
-            document.getElementById('particles').appendChild(particle);
-            
-            // Remove particle after animation
-            setTimeout(() => {
-                if (particle.parentNode) {
-                    particle.parentNode.removeChild(particle);
-                }
-            }, (duration + 5) * 1000);
-        }
-        
-        // Create particles periodically
-        setInterval(createParticle, 800);
-        
-        // Create initial particles
-        for (let i = 0; i < 10; i++) {
-            setTimeout(createParticle, i * 200);
-        }
-
-        // Scroll Animation Observer
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements with animation classes
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in');
-            animatedElements.forEach(el => observer.observe(el));
-        });
-
         // Modal functions
         function openModal(modalId) {
             console.log('Opening modal:', modalId);
@@ -1347,5 +981,5 @@
             });
         }
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98365e1606de3d98',t:'MTc1ODU5MTk3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98117ad6a3f5fce8',t:'MTc1ODIwNTE4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
